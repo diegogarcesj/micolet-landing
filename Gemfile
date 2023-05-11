@@ -73,3 +73,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'awesome_print'
+
+gem 'simple_form'
+gem "simple_form_tailwind_css"

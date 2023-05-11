@@ -1,0 +1,33 @@
+
+<div class="grid grid-cols-3 gap-4">
+  <div></div>
+
+  <div>
+  
+    <%= image_tag 'micolet-logo.svg', width: '240', class: 'mx-auto' %>
+    <p class="font-serif text-center text-slate-600">Almost new fashion with garantee</p>
+
+    <h4 class="font-serif text-center font-extrabold text-neutral-700 mt-10">Welcome! Soon we will launch our site in this country.</h4>
+    <h4 class="font-serif text-center font-extrabold text-neutral-700 mb-5">Subscribe to receive our newsletter.</h4>
+
+    <%= simple_form_for @lead do |f| %>
+      <%= f.label "Email", class: 'font-serif text-slate-600' %>
+      <%= f.input_field :email, class: 'block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-600' %>
+      
+      <%= f.label "Preferences", class: 'block mt-5 font-serif text-slate-600' %>
+      <%= f.input_field :women, inline_label: "Women's fashion" %><br />
+      <%= f.input_field :men, inline_label: "Men's fashion" %><br />
+      <%= f.input_field :children, inline_label: "Children's fashion" %><br />
+      <%= f.button :submit, 'Subscribe me!', class: 'mt-5 bg-green-500 hover:bg-green-400 text-white p-2 rounded block mx-auto' %>
+    <% end %>  
+  
+  </div>
+
+  <div></div>  
+</div>
+
+
+
+
+
+
