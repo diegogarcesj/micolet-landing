@@ -4,5 +4,23 @@ class LeadsController < ApplicationController
   end
 
   def create
+    @lead = Lead.new(lead_params)
+    if @lead.save
+      flash[:success] = 'Subscribed to our newsletter!'
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def lead_params
+    params.require(:lead).permit(
+      :email,
+      :women,
+      :men,
+      :children
+    )
   end
 end
