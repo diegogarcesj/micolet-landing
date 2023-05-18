@@ -54,6 +54,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug"
 end
 
 group :development do
@@ -74,7 +75,9 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'awesome_print'
+gem "awesome_print"
 
-gem 'simple_form'
+gem "simple_form"
 gem "simple_form_tailwind_css"
+
+gem "json"

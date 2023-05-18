@@ -1,6 +1,5 @@
 class Lead < ApplicationRecord
-  
-  validates :email, uniqueness: :true
+  include EmailValidatable
   validate :at_least_one_checkbox
 
   private

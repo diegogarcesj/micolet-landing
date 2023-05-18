@@ -1,4 +1,8 @@
 class LeadsController < ApplicationController
+  def index
+    redirect_to root_path
+  end
+
   def new
     @lead = Lead.new
   end

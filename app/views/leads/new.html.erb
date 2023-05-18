@@ -12,7 +12,7 @@
     <%= simple_form_for @lead, data: { turbo: false } do |f| %>
       <%= f.label "Email", class: 'font-serif text-slate-600' %>
       <%= f.input_field :email,
-        class: 'block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-600' %>
+        class: 'block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-600' %>
       <%= f.error :email, id: 'email_error', class: 'text-sm text-red-600' %>
 
       <%= f.label "Preferences", class: 'block mt-5 font-serif text-slate-600' %>
@@ -26,7 +26,7 @@
         </div>
       <% end %>
 
-      <%= f.button :submit, 'Subscribe me!', class: 'mt-5 bg-green-500 hover:bg-green-400 text-white p-2 rounded block mx-auto' %>
+      <%= f.button :submit, 'Subscribe me!', class: 'mt-5 bg-green-500 hover:bg-green-400 text-white p-2 rounded block mx-auto font-serif' %>
     <% end %>  
   </div>
 
