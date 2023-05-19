@@ -11,8 +11,8 @@
 
     <%= simple_form_for @lead, data: { turbo: false } do |f| %>
       <%= f.label "Email", class: 'font-serif text-slate-600' %>
-      <%= f.input_field :email,
-        class: 'block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-600' %>
+      <%= f.input_field :email, placeholder: 'example@email.com',
+        class: 'block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-600 font-serif' %>
       <%= f.error :email, id: 'email_error', class: 'text-sm text-red-600' %>
 
       <%= f.label "Preferences", class: 'block mt-5 font-serif text-slate-600' %>

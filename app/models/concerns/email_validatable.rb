@@ -20,7 +20,6 @@ module EmailValidatable
     http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
     request =  Net::HTTP::Get.new(uri)
-    
     response = http.request(request)
 
     puts "Status code: #{ response.code }"
