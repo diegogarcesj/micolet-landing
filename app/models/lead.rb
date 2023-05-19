@@ -5,7 +5,7 @@ class Lead < ApplicationRecord
   after_create :send_subscribe_email
 
   def send_subscribe_email
-    SubscribeMailer.with(lead: self).subscribe_email.deliver_now
+    SubscribeMailer.with(lead: self).subscribe_email.deliver_later
   end
 
   private
