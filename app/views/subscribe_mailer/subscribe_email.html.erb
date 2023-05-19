@@ -1,0 +1,18 @@
+<h1>Hello, <%= @lead.email %></h1>
+<p>
+  You have successfully subscribed to our newsletter with the next preferences:
+</p>
+<ul>
+  <% if @lead.women %>
+    <li>Women's fashion</li>
+  <% end %>
+  <% if @lead.men %>
+    <li>Men's fashion</li>
+  <% end %>
+  <% if @lead.children %>
+    <li>Children's fashion</li>
+  <% end %>
+</ul>
+<p>
+  Kind regards!
+</p>
