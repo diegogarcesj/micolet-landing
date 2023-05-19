@@ -10,7 +10,7 @@ class LeadsController < ApplicationController
   def create
     @lead = Lead.new(lead_params)
     if @lead.save
-      flash[:success] = 'Subscribed to our newsletter!'
+      flash[:success] = I18n.t('flash.subscribed')
       redirect_to root_path
     else
       render :new
