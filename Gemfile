@@ -81,3 +81,5 @@ gem "simple_form"
 gem "simple_form_tailwind_css"
 
 gem "json"
+
+gem 'dotenv-rails', groups: [:development, :test]
