@@ -6,13 +6,13 @@ module EmailValidatable
 
   included do
     validates :email, presence: true, uniqueness: :true, format: { with: URI::MailTo::EMAIL_REGEXP }
-    validate :validate_email_with_api
+    # validate :validate_email_with_api
   end
 
   private
 
   def validate_email_with_api
-    api_key = '803ccf6caf5e43e29a6fff157e1aac1c'  # Better in .env
+    api_key = ENV['ABSTRACT_API_KEY']
     uri = URI("https://emailvalidation.abstractapi.com/v1/?api_key=#{api_key}&email=#{email}")
 
     http = Net::HTTP.new(uri.host, uri.port)
