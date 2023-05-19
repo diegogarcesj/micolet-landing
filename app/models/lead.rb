@@ -12,7 +12,7 @@ class Lead < ApplicationRecord
 
   def at_least_one_checkbox
     unless women || men || children
-      errors.add(:base, "Select at least one checkbox")
+      errors.add(:base, I18n.t('custom_errors.at_least_one') )
     end
   end  
 end

@@ -1,0 +1,74 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+fr:
+
+  activerecord:
+    errors:
+      models:
+        lead:
+          attributes:
+            email:
+              blank: "Vous devez entrer un email"
+              taken: "Cet e-mail est déjà enregistré"
+              invalid: "Le format de l'e-mail n'est pas valide"
+
+  custom_errors:
+    at_least_one: "Sélectionnez au moins une case à cocher"
+    invalid_email: "E-mail invalide"
+    error_api: "Erreur dans l'API de validation des e-mails"
+
+  flash:
+    subscribed: "Inscrit à notre newsletter! Nous avons envoyé un e-mail de confirmation."
+
+  landing:
+    logo_text: "Mode presque neuve avec garantie"
+    welcome_text: "Bienvenue! Bientôt, nous lancerons notre site dans ce pays."
+    subscribe_text: "Inscrivez-vous pour recevoir notre newsletter."
+    email_label: "E-mail"
+    email_placeholder: "exemple@email.com" 
+    preferences_label: "Préférences"
+    women_label: "Mode féminine"
+    men_label: "Mode homme"
+    children_label: "Mode enfant"
+    subscribe_btn: "Abonnez-moi!"
+
+  subscribe_mailer:
+    subscribe_email:
+      subject: "Inscrit à notre newsletter!" 
+
+  subscribed_email:
+    hello: "Bonjour, %{email}"
+    subscribed_text: "Vous vous êtes abonné avec succès à notre newsletter avec les préférences suivantes:"
+    women_preference: "Mode féminine"
+    men_preference: "Mode masculine"
+    children_preference: "Mode enfant"
+    goodbye: "Au revoir!"

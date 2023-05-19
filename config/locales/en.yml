@@ -30,4 +30,45 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  activerecord:
+    errors:
+      models:
+        lead:
+          attributes:
+            email:
+              blank: "You must enter a email"
+              taken: "This email is already registered"
+              invalid: "The email format is invalid"
+
+  custom_errors:
+    at_least_one: "Select at least one checkbox"
+    invalid_email: "Invalid email"
+    error_api: "Error in email validation API"
+
+  flash:
+    subscribed: "Subscribed to our newsletter! We have sent a confirmation email."
+
+  landing:
+    logo_text: "Almost new fashion with garantee"
+    welcome_text: "Welcome! Soon we will launch our site in this country."
+    subscribe_text: "Subscribe to receive our newsletter."
+    email_label: "Email"
+    email_placeholder: "example@email.com" 
+    preferences_label: "Preferences"
+    women_label: "Women's fashion"
+    men_label: "Men's fashion"
+    children_label: "Children's fashion"
+    subscribe_btn: "Subscribe me!"
+
+  subscribe_mailer:
+    subscribe_email:
+      subject: "Subscribed to our newsletter!" 
+
+  subscribed_email:
+    hello: "Hello, %{email}"
+    subscribed_text: "You have successfully subscribed to our newsletter with the next preferences:"
+    women_preference: "Women's fashion"
+    men_preference: "Men's fashion"
+    children_preference: "Children's fashion"
+    goodbye: "Kind regards!"

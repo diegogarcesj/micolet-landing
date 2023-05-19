@@ -1,18 +1,18 @@
-<h1>Hello, <%= @lead.email %></h1>
+<h1><%= t('subscribed_email.hello', email: @lead.email) %></h1>
 <p>
-  You have successfully subscribed to our newsletter with the next preferences:
+  <%= t('subscribed_email.subscribed_text') %>
 </p>
 <ul>
   <% if @lead.women %>
-    <li>Women's fashion</li>
+    <li><%= t('subscribed_email.women_preference') %></li>
   <% end %>
   <% if @lead.men %>
-    <li>Men's fashion</li>
+    <li><%= t('subscribed_email.men_preference') %></li>
   <% end %>
   <% if @lead.children %>
-    <li>Children's fashion</li>
+    <li><%= t('subscribed_email.children_preference') %></li>
   <% end %>
 </ul>
 <p>
-  Kind regards!
+  <%= t('subscribed_email.goodbye') %>
 </p>

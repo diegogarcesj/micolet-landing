@@ -26,10 +26,10 @@ module EmailValidatable
     puts "Response body: #{ response.body }"
 
     unless response.code.to_i == 200 && JSON.parse(response.body).try(:[], "quality_score").try(:to_f) > 0.7
-      errors.add(:email, "Invalid email")
+      errors.add(:email, I18n.t('custom_errors.invalid_email'))
     end
   rescue StandardError => error
     puts "Error (#{ error.message })"
-    errors.add(:email, "Error in email validation API")
+    errors.add(:email, I18n.t('custom_errors.error_api'))
   end
 end
