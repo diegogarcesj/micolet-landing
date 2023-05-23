@@ -1,8 +1,8 @@
-<h1><%= t('subscribed_email.hello', email: @lead.email) %></h1>
-<p>
+<h2 style="color: #67B884; font-family: serif;"><%= t('subscribed_email.hello', email: @lead.email) %></h2>
+<p style="color: #404040; font-family: serif;">
   <%= t('subscribed_email.subscribed_text') %>
 </p>
-<ul>
+<ul style="color: #404040; font-family: serif;">
   <% if @lead.women %>
     <li><%= t('subscribed_email.women_preference') %></li>
   <% end %>
@@ -13,6 +13,6 @@
     <li><%= t('subscribed_email.children_preference') %></li>
   <% end %>
 </ul>
-<p>
-  <%= t('subscribed_email.goodbye') %>
+<p style="color: #67B884; font-family: serif;">
+  <strong><%= t('subscribed_email.goodbye') %></strong>
 </p>
