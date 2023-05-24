@@ -86,3 +86,6 @@ gem "simple_form_tailwind_css"
 gem "json"
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Multi-step form
+gem 'wicked'

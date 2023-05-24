@@ -11,7 +11,7 @@ class LeadsController < ApplicationController
     @lead = Lead.new(lead_params)
     if @lead.save
       flash[:success] = I18n.t('flash.subscribed')
-      redirect_to root_path
+      redirect_to lead_survey_index_path(@lead)
     else
       render :new
     end

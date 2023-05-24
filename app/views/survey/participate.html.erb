@@ -1,0 +1,22 @@
+<div class="grid grid-cols-3 gap-4">
+  <div></div>
+
+  <div>
+    <%= image_tag 'micolet-logo.svg', width: '240', class: 'mx-auto' %>
+    <p class="font-serif text-center text-slate-600"><%= t('landing.logo_text') %></p>
+
+    <h2 class="font-serif text-center font-extrabold text-neutral-700 mt-10"><%= t('survey.want_participate') %></h2>
+
+    <div class="grid grid-cols-2 gap-10 mt-20">
+      <div>
+        <%= link_to t('survey.skip'), root_path, class: "mt-5 bg-gray-500 hover:bg-gray-400 text-white p-2 rounded block mx-auto font-serif text-center no-underline" %>
+      </div>
+
+      <div>
+        <%= link_to t('survey.participate'), next_wizard_path, class: "mt-5 bg-green-500 hover:bg-green-400 text-white p-2 rounded block mx-auto font-serif text-center no-underline" %>
+      </div>
+    </div>
+  </div>
+
+  <div></div>  
+</div>

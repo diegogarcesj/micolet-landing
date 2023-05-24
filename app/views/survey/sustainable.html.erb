@@ -1,0 +1,33 @@
+<div class="grid grid-cols-3 gap-4">
+  <div></div>
+
+  <div>
+    <%= image_tag 'micolet-logo.svg', width: '240', class: 'mx-auto' %>
+    <p class="font-serif text-center text-slate-600"><%= t('landing.logo_text') %></p>
+
+    <h2 class="font-serif text-center font-extrabold text-neutral-700 mt-10"><%= t('survey.interested_sustainable') %></h2>
+
+
+    <%= form_for @lead, url: wizard_path, method: :put, data: { turbo: false } do |f| %>
+      <div class="mt-10 text-center">  
+        <%= f.radio_button :sustainable, true, checked: @lead.sustainable %>
+        <%= f.label :sustainable, t('survey.im_interested'), class: 'font-serif text-slate-600' %>
+        <br />
+        <%= f.radio_button :sustainable, false, checked: !@lead.sustainable %>
+        <%= f.label :sustainable, t('survey.not_really'), class: 'font-serif text-slate-600' %>
+
+        <div class="grid grid-cols-2 gap-10 mt-10">
+          <div>
+            <%= link_to t('survey.back'), previous_wizard_path, class: "mt-5 bg-gray-500 hover:bg-gray-400 text-white p-2 rounded block mx-auto font-serif text-center no-underline" %>
+          </div>
+
+          <div>
+            <%= f.submit t('survey.next'), class: 'mt-5 bg-green-500 w-full hover:bg-green-400 text-white p-2 rounded block mx-auto font-serif' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div></div>  
+</div>

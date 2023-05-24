@@ -18,9 +18,9 @@ RSpec.describe LeadsController, type: :controller do
         }.to change(Lead, :count).by(1)
       end
 
-      it 'redirects to the root path' do
+      it 'redirects to the survey' do
         post :create, params: { lead: { email: 'juanperez@gmail.com', women: true, men: true, children: true } }
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to(lead_survey_index_path(Lead.last))
       end
     end
 

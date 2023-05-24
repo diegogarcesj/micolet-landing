@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_11_175828) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_23_224305) do
   create_table "leads", force: :cascade do |t|
     t.string "email"
     t.boolean "women"
@@ -18,6 +18,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_11_175828) do
     t.boolean "children"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "birthdate"
+    t.boolean "sustainable"
+    t.integer "channel"
+    t.string "coupon"
   end
 
 end
