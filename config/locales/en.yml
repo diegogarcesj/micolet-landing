@@ -32,6 +32,11 @@
 en:
 
   activerecord:
+    attributes:
+      lead:
+        channel_online: "On line"
+        channel_physical: "Physical stores"
+
     errors:
       models:
         lead:
@@ -72,3 +77,17 @@ en:
     men_preference: "Men's fashion"
     children_preference: "Children's fashion"
     goodbye: "Kind regards!"
+
+  survey:
+    want_participate: "Do you want to participate in a survey to earn a discount coupon?"
+    skip: "Skip"
+    participate: "Participate"
+    what_birthdate: "What is your birth date?"
+    back: "Back"
+    next: "Next"
+    interested_sustainable: "Are you interested in a sustainable lifestyle?"
+    im_interested: "Yes, I'm interested!"
+    not_really: "No, not really"
+    prefer_channel: "Do you prefer to buy online or in physical stores?"
+    your_coupon: "Here is your discount coupon! Thank you!"
+    finish: "Finish"
