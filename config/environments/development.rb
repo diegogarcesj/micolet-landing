@@ -46,7 +46,7 @@ Rails.application.configure do
   #   port:                 587,
   #   domain:               'micolet.com',
   #   user_name:            'micoletlanding',
-  #   password:             'tish6yattish6yat',
+  #   password:             '',
   #   authentication:       'plain',
   #   enable_starttls_auto: true,
   #   open_timeout:         5,
