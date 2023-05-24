@@ -6,7 +6,7 @@ module EmailValidatable
 
   included do
     validates :email, presence: true, uniqueness: :true, format: { with: URI::MailTo::EMAIL_REGEXP }
-    validate :validate_email_with_api
+    validate :validate_email_with_api, on: :create
   end
 
   private
